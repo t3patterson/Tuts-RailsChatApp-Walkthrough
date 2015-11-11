@@ -1,0 +1,75 @@
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+*,*:before,*:after{
+  box-sizing: border-box;
+}
+
+header{
+  >*{display: block; }
+  img{
+    width: 200px;
+    margin: 0 auto;
+  }
+  h1{
+    margin-top: 0;
+  }
+  text-align: center;
+}
+
+.chirp-box{
+  padding: 10px;
+  padding-bottom: 130px;
+  background: #eee;
+  position: relative;
+}
+
+.chirp-unit{
+  background: #fff;
+  padding-bottom: 5px;
+  border: 2px solid #999;
+  .media-body{
+    padding-top: 10px;
+  }
+}
+
+.submit-box{
+  position: absolute;
+  bottom: 0; left:50%;
+  transform: translate(-50%,0%);
+  width: 80%;
+  padding: 20px;
+  background: #3498db;
+  
+  .username{
+    display: inline-block;
+    width: 33%;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  
+  
+  .input-group-lg{
+      width: 100%;
+    >*{
+      display: inline-block;
+    }
+
+    .message{
+      width: 93%;
+    }
+
+    .input-group-addon{
+      color: white;
+      width: 6%;
+      text-align: center;
+
+      &:hover{
+        cursor: pointer;
+        background: #8ed;
+      }
+    }
+  }
+}

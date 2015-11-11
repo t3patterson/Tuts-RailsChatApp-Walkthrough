@@ -1,0 +1,2 @@
+module ChirpboxesHelper
+end

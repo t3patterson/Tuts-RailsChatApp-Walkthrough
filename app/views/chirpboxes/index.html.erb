@@ -1,0 +1,70 @@
+<header>
+<img src="https://lbwong.files.wordpress.com/2010/07/speech20logo.jpg" alt=""><h1>Chirpbox </h1>
+<h6>Keep talking</h6>
+
+</header>
+
+<!-- <div class="container chirp-box">
+  <div class="media chirp-unit">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="https://robohash.org/sitsequiquia.png?size=70x70" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Travis <small>Jan 21, 2015</small></h4>
+      <p>Say hi to errone!</p>
+    </div>
+  </div>
+  <div class="media chirp-unit">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="https://robohash.org/travis.png?size=70x70" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Thomas <small>Jan 21, 2015</small></h4>
+      <p>Say hi to errone!</p>
+    </div>
+  </div>
+  <div class="media chirp-unit">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="https://robohash.org/thomas.png?size=70x70" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Travis <small>Jan 21, 2015</small></h4>
+      <p>Say hi to errone!</p>
+    </div>
+  </div>
+</div> -->
+
+<div class="container chirp-box">
+ <% @chirps.each do |chirp| %>
+  <div class="media chirp-unit">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="https://robohash.org/<%=chirp[:name]%> .png?size=70x70" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading"><%=chirp[:name]%> <small>Jan 21, 2015</small></h4>
+      <p><%=chirp[:message]%> </p>
+    </div>
+    
+  </div>
+  <%end%>
+<%=form_for @new_chirp do |f| %>
+
+  <div class="submit-box">
+         <%= f.text_field :name, {class: "form-control username", placeholder: "User"}%>
+          <div class="input-group input-group-lg">
+            <%= f.text_field :message, {class: "form-control message", placeholder: "chirp away"}%>
+            <%= f.submit " + " , class: "input-group-addon label-success" %>
+          </div>
+      </div>
+<%end%>
+
+  
+</div>
